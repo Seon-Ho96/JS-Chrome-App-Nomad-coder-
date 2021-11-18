@@ -1,8 +1,28 @@
-//Booleans
 
-const amIFat = true; //boolean
-console.log(amIFat);
 
-const nothing = null; //there is nothing (empty variable) (type)
-let something; //undifiend (type), 메모리는 존재
-console.log(something);
+
+
+
+
+
+
+
+
+
+
+
+
+//Arrays
+const daysOfWeek = ["mon", "tue", "wed", "thu", "fri", "sat"];
+const nonsense = [1,2 ,'hello', false, null, true, undefined, 'seonho'];
+
+//Get Item from Array
+console.log(daysOfWeek[4]);
+
+console.log(daysOfWeek);
+
+//Add one more day to the array
+daysOfWeek.push("sun");
+
+
+console.log(daysOfWeek, nonsense);
