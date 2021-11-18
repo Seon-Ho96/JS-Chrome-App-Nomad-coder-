@@ -1,12 +1,45 @@
-//Object
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//function
+function plus(firstnumber, secondnumber){
+    console.log(firstnumber + secondnumber);
+}
+function divide(a, b){
+    console.log(a / b);
+}
+
+plus(8, 60);
+divide(50, 4);
+
 const player = {
-    name: "seonho",
-    points: 10,
-    fat: false,
-};
-console.log(player); //console -> object
+    name : 'seonho',
+    sayHello : function(otherPersonsName){
+        console.log("hello " + otherPersonsName + " nice to meet you");
+    }
+}
+
 console.log(player.name);
-console.log(player["name"]);
-player.fat = true;
-player.lastName = "Lee"; //요소 추가
-console.log(player);
+player.sayHello("seo");
