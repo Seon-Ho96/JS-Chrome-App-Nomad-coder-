@@ -1,5 +1,15 @@
-const title = document.querySelectorAll(".hello h1"); //element를 css 방식으로 호출 가능
+const h1 = document.querySelector("div.hello:first-child h1");
 
-const t = document.getElementsByClassName("hello");
+console.dir(h1);
 
-console.log(title);
+function handleTitleClick() {
+    // const clickedClass = "clicked";
+    // if(h1.classList.contains(clickedClass)){
+    //     h1.classList.remove(clickedClass);
+    // } else {
+    //     h1.classList.add(clickedClass);
+    // }
+    h1.classList.toggle("clicked");
+}
+
+h1.addEventListener("click",handleTitleClick);
