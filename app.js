@@ -1,23 +1,8 @@
-const calculator = {
-    plus: function(a,b) {
-        return(a+b);
-    },
-    minus: function(a,b) {
-        return(a-b);
-    },
-    times: function(a,b) {
-        return(a*b);
-    },
-    divide: function(a,b) {
-        return(a/b);
-    },
-    power: function(a,b) {
-        return(a**b);
-    },
-};
+const title = document.getElementById("title");
 
-const plusResult = calculator.plus(2,3);
-const minusResult = calculator.minus(plusResult,10);
-const timesResult = calculator.times(10,minusResult);
-const divideResult = calculator.divide(timesResult,plusResult);
-const powerResult = calculator.power(divideResult,minusResult);
+console.dir(title); //element를 더 자세히 보여줌.
+
+title.innerText = "Got you!"; //js로 element 변경
+
+console.log(title.id);
+console.log(title.className);
