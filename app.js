@@ -1,8 +1,5 @@
-const title = document.getElementById("title");
+const title = document.querySelectorAll(".hello h1"); //element를 css 방식으로 호출 가능
 
-console.dir(title); //element를 더 자세히 보여줌.
+const t = document.getElementsByClassName("hello");
 
-title.innerText = "Got you!"; //js로 element 변경
-
-console.log(title.id);
-console.log(title.className);
+console.log(title);
