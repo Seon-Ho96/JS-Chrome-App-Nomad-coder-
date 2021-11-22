@@ -1,15 +1,13 @@
-const h1 = document.querySelector("div.hello:first-child h1");
-
-console.dir(h1);
-
-function handleTitleClick() {
-    // const clickedClass = "clicked";
-    // if(h1.classList.contains(clickedClass)){
-    //     h1.classList.remove(clickedClass);
-    // } else {
-    //     h1.classList.add(clickedClass);
-    // }
-    h1.classList.toggle("clicked");
+function windowResised() {
+    let width = window.innerWidth;
+    if(width < 1000 && width >= 600){
+        document.body.style.backgroundColor = "violet";
+    } else if(width < 600){
+        document.body.style.backgroundColor = "aqua";
+    } else {
+        document.body.style.backgroundColor = "beige";
+    }
+    
 }
 
-h1.addEventListener("click",handleTitleClick);
+window.addEventListener("resize",windowResised);
