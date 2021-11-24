@@ -4,19 +4,18 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatibla" content="IE-edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <title>Momentum</title>
+        <link rel="stylesheet" href="css/style.css">
+        <title>Momentum App</title>
     </head>
     <body>
-        <!-- input의 유효성 검사를 작동시키기 위해서는 input이 form 내부에 있어야함 (required, maxlength)  -->
         <form class="hidden" id="login-form">
             <input required maxlength="15" type="text" placeholder="what is your name?"/>
             <button>Log in</button>
-            <!-- input안에 있는 button을 누르거나 type이 submit인 input을 클릭하면 창이 새로고침됨 (뒤에 ?안붙음) -->
-            <!-- form안에 있는 버튼을 누르거나 input에서 enter를 누르면 자동 submit -->
         </form>
-        <h1 id="greeting" class="hidden"></h1>
-        <a href="https://nomadcoders.co">GO to courses</a>
-        <script src="input.js"></script>
+        <h1 class="hidden" id="greeting"></h1>
+        <h2 id="clock">00:00</h2>
+        <script src="js/clock.js"></script>
+        <script src="js/greetings.js"></script>
+        
     </body>
 </html>
