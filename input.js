@@ -37,7 +37,7 @@ function handleLinkClick(event){
     event.preventDefault()
     // alert("Click!"); 링크이동 막음(ok누르면 링크 이동)
 }
-//fdd
+//fddasdf
 
 link.addEventListener("click", handleLinkClick);
 
