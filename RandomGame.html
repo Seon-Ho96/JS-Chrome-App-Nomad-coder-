@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatibla" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Momentum App</title>
+    </head>
+    <body>
+        <h1>Random Number Game</h1>
+        <form id="game">
+            <label for="maxnum"><b>Generate a number between 0 and</b></label>
+            <input required type="number" id="maxnum">
+            <br><br>
+            <label for="mynum">Guess the number: </label>
+            <input required type="number" id="mynum"/>
+            <button>Play!</button>
+        </form>
+        <span class="hidden" id="explanation"></span>
+        <br>
+        <span class="hidden" id="result"></span>
+        <script src="js/RandomGame.js"></script>
+        
+    </body>
+</html>
