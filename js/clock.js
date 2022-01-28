@@ -17,3 +17,7 @@ getClock();
 //일정 간격마다 실행시키는 함수
 setInterval(getClock, 1000); //5000ms
 
+let _100 = "2";
+
+// console.log(_100);
+
