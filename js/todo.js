@@ -1,5 +1,6 @@
 const toDoForm = document.getElementById("todo-form");
 const toDoInput = document.querySelector("#todo-form input");
+// toDoForm.querySelector("input")
 const toDoList = document.getElementById("todo-list");
 
 const TODOS_KEY = "todos";
@@ -8,12 +9,16 @@ let toDos = [];
 
 function saveToDos(){
     // element stringfy
-    localStorage.setItem("todos",JSON.stringify(toDos));
+    localStorage.setItem(TODOS_KEY,JSON.stringify(toDos));
+    //localstorage 에는 string만 저장 가능, array 저장 불가 -> stringfy
 }
 function deleteTodo(event){
     //클릭한 버튼의 부모요소(li) 삭제
     const li = event.target.parentElement;
     li.remove();
+    toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
+    saveToDos();
+
 }
 
 function paintTodo(newTodo){
@@ -34,8 +39,12 @@ function paintTodo(newTodo){
 
 function handleTodoSubmit(event){
     event.preventDefault();
+
+    //save value
     const newTodo = toDoInput.value;
     // console.log(toDoInput.value);
+
+    //Make empty
     toDoInput.value = "";
     const newTodoObj = {
         text:newTodo,
@@ -50,20 +59,16 @@ function handleTodoSubmit(event){
 
 toDoForm.addEventListener("submit", handleTodoSubmit);
 
-function sayHello(item){
-    console.log("this is the turn of", item);
-}
-
 const savedToDos = localStorage.getItem(TODOS_KEY);
+ 
 if(savedToDos !== null){
     const parsedToDos = JSON.parse(savedToDos);
     toDos = parsedToDos;
     parsedToDos.forEach(paintTodo);
+    //foreach : elements 마다 함수를 실행해줌
     // arrow function
     // parsedToDos.forEach((item) => console.log("this is the turn of ",item));
     
 }
 
-function filter(){
-    
-}
+//[1,2,3,4,5].filter(sexyFilter()) : true에 해당하는 인덱스만 남아 새 array를 생성
